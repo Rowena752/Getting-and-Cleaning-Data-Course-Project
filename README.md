@@ -110,7 +110,7 @@ x <- matrix(c(grepthis("-X"), grepthis("-Y"), grepthis("-Z")), ncol=nrow(y))
 dtbl$featAxis <- factor(x %*% y, labels=c(NA, "X", "Y", "Z"))
 ```
 
-#Create a tidy data set, which features the average of each variable for every activity and subject
+### Create a tidy data set, which features the average of each variable for every activity and subject
 ```{r message=FALSE, results='hide'}
 setkey(dtbl, subject, activity, featDomain, featAcceleration, featInstrument, featJerk, featMagnitude, featVariable, featAxis)
 tidy_data <- dtbl[, list(count = .N, average = mean(value)), by=key(dtbl)]
