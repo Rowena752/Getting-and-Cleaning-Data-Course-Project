@@ -104,3 +104,6 @@ dtbl$featAxis <- factor(x %*% y, labels=c(NA, "X", "Y", "Z"))
 #Create a tidy data set
 setkey(dtbl, subject, activity, featDomain, featAcceleration, featInstrument, featJerk, featMagnitude, featVariable, featAxis)
 tidy_data <- dtbl[, list(count = .N, average = mean(value)), by=key(dtbl)]
+
+# Creating a file for the tidy data set created
+write.table(tidy_data, file = "./tidy_data.txt", row.name = FALSE)
