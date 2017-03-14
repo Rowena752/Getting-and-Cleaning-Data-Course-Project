@@ -1,5 +1,5 @@
 # Getting-and-Cleaning-Data-Course-Project
-# After Getting and Loading the Data Set:
+## After Getting and Loading the Data Set:
 ## Merge the training and testing sets
 ### Concatenate the data tables 
 ```{r message=FALSE, results='hide'}
